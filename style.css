@@ -1,4 +1,29 @@
 *{
     padding: 0; 
     margin: 0; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.background{
+    background: linear-gradient(
+        114deg, 
+        rgba(114, 514, 191, 0.81), 
+        rgba(11, 45, 14, 0.19)
+    );
+    height: 100vh; 
+    align-items: center;
+}
+
+@keyframes flyIn {
+    from {
+        top: 0;
+        left: 1919px;
+    }
+    to {
+        top: 0; 
+        left: 0; 
+    }
+}
+.title{
+    padding: 20px; 
+    animation: flyIn; 
 }
