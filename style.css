@@ -4,7 +4,10 @@
     font-family: 'Trebuchet MS', sans-serif;
     box-sizing: border-box;
 }
-
+h2{
+    display: flex;
+    justify-content: center;
+}
 .background {
     background: linear-gradient(
         114deg, 
@@ -75,7 +78,7 @@
     background: rgba(255, 255, 255, 0.1);
     z-index: 0;
     transform: scale(0);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; 
 }
 
 .card:hover {
@@ -153,4 +156,59 @@
     .parties { flex-direction: column; }
     .partiesText { margin-left: 0; border-left: none; padding: 10px 0; }
     .partiesBlock { margin: 0 auto 20px; }
+}
+.barsContainer{
+    height: 100px; 
+    width: 80%; 
+    padding: 10px; 
+    display: flex; 
+    justify-self: center; 
+    font-size: 1em;
+}
+.barsCurrent{
+    width: 66%;  
+    background: linear-gradient(
+        90deg, 
+        #19198a, 
+        #114514, 
+        #e8a220, 
+        #ff0000
+    ); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+    margin: 5px; 
+    border-radius: 10px; 
+}
+.barsOpposition{
+    width: 33%; 
+    background: linear-gradient(
+        90deg, 
+        #b48a5e, 
+        #55eeca, 
+        #fc82f1
+    ); 
+    display: flex;
+    justify-content: center;
+    align-self: right;
+    align-items: center;
+    margin: 5px; 
+    border-radius: 10px;
+}
+@keyframes shadow {
+    from {
+        box-shadow: 0px 0px 0px 0px rgba(114, 514, 191, 0.98) ;
+    }
+    to{
+        box-shadow: 5px 5px 20px 5px rgba(114, 514, 191, 0.98) ;
+    }
+}
+.barsCurrent:hover{
+    animation: shadow 1s; 
+    box-shadow: 5px 5px 20px 5px rgba(114, 514, 191, 0.98) ;
+}
+.barsOpposition:hover{
+    animation: shadow 1s; 
+    box-shadow: 5px 5px 20px 5px rgba(114, 514, 191, 0.98) ;
 }
