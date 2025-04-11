@@ -166,7 +166,7 @@ h2{
     font-size: 1em;
 }
 .barsCurrent{
-    width: 66%;  
+    width: 82.5%;  
     background: linear-gradient(
         90deg, 
         #19198a, 
@@ -182,10 +182,9 @@ h2{
     border-radius: 10px; 
 }
 .barsOpposition{
-    width: 33%; 
+    width: 16.5%; 
     background: linear-gradient(
         90deg, 
-        #b48a5e, 
         #55eeca, 
         #fc82f1
     ); 
