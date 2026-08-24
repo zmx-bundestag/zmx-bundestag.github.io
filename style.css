@@ -40,7 +40,7 @@ h2{
     font-size: 2.5em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     background: linear-gradient(45deg, #11b5fe, #ff6b6b);
-    -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
     transition: transform 0.3s ease;
 }
@@ -112,7 +112,7 @@ h2{
 }
 
 .partiesBlock {
-    flex: 0 0 120px;
+    width: 120px;
     height: 120px;
     border-radius: 10px;
     display: flex;
@@ -164,13 +164,15 @@ h2{
     display: flex; 
     justify-self: center; 
     font-size: 1em;
+    margin-left: 10px; 
+    margin-right: 10px; 
 }
 .barsCurrent{
     width: 50%;  
     background: linear-gradient(
         90deg, 
-        #19198a, 
         #114514, 
+        #ffd700,
         #e8a220, 
         #ff0000
     ); 
@@ -179,7 +181,8 @@ h2{
     align-items: center;
     color: white; 
     margin: 5px; 
-    border-radius: 10px; 
+    border-radius: 5px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .barsOpposition{
     width: 50%; 
@@ -193,24 +196,81 @@ h2{
     align-self: right;
     align-items: center;
     margin: 5px; 
-    border-radius: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 @keyframes shadow {
     from {
         box-shadow: 0px 0px 0px 0px rgba(114, 514, 191, 0.98) ;
     }
     to{
-        box-shadow: 5px 5px 20px 5px rgba(114, 514, 191, 0.98) ;
+        box-shadow: 5px 5px 10px 5px rgba(114, 514, 191, 0.98) ;
     }
 }
 .barsCurrent:hover{
-    animation: shadow 1s; 
+    transform: scale(1.02) translateX(-5px);
     box-shadow: 5px 5px 20px 5px rgba(114, 514, 191, 0.98) ;
 }
 .barsOpposition:hover{
-    animation: shadow 1s; 
+    transform: scale(1.02) translateX(5px);
     box-shadow: 5px 5px 20px 5px rgba(114, 514, 191, 0.98) ;
 }
-.history{
-    
+.seats{
+    border: 10px solid rgba(0, 0, 0, 0.9);
+    padding: 0px; 
+    margin: 0px; 
+.seat .img{
+    margin: 0px;
+    padding: 0px; 
+}
+}
+.History{
+    margin-top: 10px; 
+    padding: 30px; 
+    background: linear-gradient(180deg, 
+    black, 
+    red,
+    gold);
+    border-radius: 10px;
+}
+.HistoryText{
+    background: linear-gradient(
+        0deg, 
+        #000000, 
+        #ffffff
+    );
+    background-clip: text;
+    color: transparent; 
+}
+.musicCard{
+    position: relative;
+    text-align: center;
+    justify-self: center;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    width: 50%; 
+    height: 100%;
+    color: rgba(255, 255, 255, 1); 
+    padding: 20px; 
+    margin: 10px; 
+    z-index: 1; 
+}
+.musicCard::before{
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute; 
+    background-image: url("/media/pic/sov.webp");
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1;
+}
+td {
+    width: 33%;
+    margin: 5px;  
+}
+.lyrics{
+    margin: 10px; 
 }
